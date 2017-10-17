@@ -11,6 +11,16 @@ defmodule CoherenceSpaWeb.Coherence.RegistrationView do
     }
   end
 
+  def render("session.json", %{user: user}) do
+    %{
+      user: %{
+        id: user.id,
+        name: user.name,
+        email: user.email
+      }
+    }
+  end
+
   def render("error.json", %{changeset: changeset}) do
     changeset = cond do
       is_nil(changeset) || changeset == "" -> "Unknown error."
