@@ -38,6 +38,8 @@ defmodule CoherenceSpaWeb.Endpoint do
     key: "_coherence_spa_key",
     signing_salt: "s6slcONJ"
 
+  plug CORSPlug, origin: ["http://localhost:4001"]
+
   plug CoherenceSpaWeb.Router
 
   @doc """

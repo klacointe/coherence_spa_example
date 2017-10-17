@@ -41,7 +41,8 @@ defmodule CoherenceSpa.Mixfile do
       {:phoenix_live_reload, "~> 1.0", only: :dev},
       {:gettext, "~> 0.11"},
       {:cowboy, "~> 1.0"},
-      {:coherence, github: "klacointe/coherence", branch: "handle_json_format"}
+      {:coherence, github: "klacointe/coherence", branch: "handle_json_format"},
+      {:cors_plug, "~> 1.4"}
     ]
   end
 
