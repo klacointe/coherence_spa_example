@@ -9,3 +9,8 @@
 #
 # We recommend using the bang functions (`insert!`, `update!`
 # and so on) as they will fail if something goes wrong.
+CoherenceSpa.Repo.delete_all CoherenceSpa.Coherence.User
+
+CoherenceSpa.Coherence.User.changeset(%CoherenceSpa.Coherence.User{}, %{name: "Test User", email: "testuser@example.com", password: "secret", password_confirmation: "secret"})
+|> CoherenceSpa.Repo.insert!
+|> Coherence.Controller.confirm!
