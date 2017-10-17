@@ -52,6 +52,7 @@ defmodule CoherenceSpaWeb.Router do
   scope "/api" do
     pipe_through :protected_api
     coherence_routes :protected
+    get "/users/me", UserController, :me
   end
 
   scope "/", CoherenceSpaWeb do
