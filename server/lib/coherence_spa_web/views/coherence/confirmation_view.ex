@@ -1,6 +1,12 @@
 defmodule CoherenceSpaWeb.Coherence.ConfirmationView do
   use CoherenceSpaWeb.Coherence, :view
 
+  def render("confirmation.json", %{info: info}) do
+    %{
+      info: info
+    }
+  end
+
   def render("error.json", %{changeset: changeset}) do
     changeset = cond do
       is_nil(changeset) || changeset == "" -> "Unknown error."
